@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# node & pycharm stuff
+*.pyc
+webpack-stats.json
+assets/bundles
+webpack_bundles/
+build/Release
+node_modules/
+jspm_packages/
+.npm
+.idea
