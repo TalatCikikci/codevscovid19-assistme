@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('react')
-);
+import ProviderApp from "./components/ProviderApp";
+import RequesterApp from "./components/RequesterApp";
+
+
+try {
+  ReactDOM.render(
+    <RequesterApp/>,
+    document.getElementById('requester'),
+  );
+}
+catch(err) {
+  ReactDOM.render(
+    <ProviderApp/>,
+    document.getElementById('provider'),
+  );
+}
