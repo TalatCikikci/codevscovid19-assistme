@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import InventoryItemViewset
+from .views import RequestItemViewset, UserViewset, UserExtendedViewset, SystemMessageViewset
 
 urlpatterns = [
-    path('', InventoryItemViewset),
+    path('systemmessages', SystemMessageViewset),
+    path('user', UserViewset),
+    path('userx', UserExtendedViewset),
+    path('requestitem', RequestItemViewset),
 ]

@@ -18,7 +18,7 @@ from django.urls import path, re_path, include
 
 urlpatterns = [
     path('', include('frontend.urls')),
-    # path('api/v1/inventory/', include('backend.urls')),
+    path('api/v1/', include('backend.urls')),
     path('admin/', admin.site.urls),
     re_path(r'^api-auth/', include('rest_framework.urls')),
 ]
