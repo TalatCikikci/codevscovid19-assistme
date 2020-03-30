@@ -1,9 +1,13 @@
 from django.urls import path
-from .views import RequestItemViewset, UserViewset, UserExtendedViewset, SystemMessageViewset
+from .views import RequestListViewset, RequestListItemViewset, UserViewset, UserExtendedViewset, SystemMessageViewset
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = [
-    path('systemmessages', SystemMessageViewset),
-    path('user', UserViewset),
-    path('userx', UserExtendedViewset),
-    path('requestitem', RequestItemViewset),
-]
+router = DefaultRouter()
+
+router.register('systemmessages', SystemMessageViewset)
+router.register('user', UserViewset)
+router.register('userx', UserExtendedViewset)
+router.register('requestlist', RequestListViewset)
+router.register('requestlistitem', RequestListItemViewset)
+
+urlpatterns = router.urls

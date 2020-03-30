@@ -1,16 +1,22 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .models import RequestItem, UserExtended, SystemMessage
+from .models import RequestList, RequestListItem, UserExtended, SystemMessage
 from django.contrib.auth.models import User
 
-from .serializers import RequestSerializer, UserSerializer, UserExtendedSerializer, SystemMessageSerializer
+from .serializers import RequestListItemSerializer, RequestListSerializer, UserSerializer, UserExtendedSerializer, \
+    SystemMessageSerializer
 
 
 # Create your views here.
-class RequestItemViewset(viewsets.ModelViewSet):
-    queryset = RequestItem.objects.all()
-    serializer_class = RequestSerializer
+class RequestListViewset(viewsets.ModelViewSet):
+    queryset = RequestList.objects.all()
+    serializer_class = RequestListSerializer
+
+
+class RequestListItemViewset(viewsets.ModelViewSet):
+    queryset = RequestListItem.objects.all()
+    serializer_class = RequestListItemSerializer
 
 
 class UserViewset(viewsets.ModelViewSet):

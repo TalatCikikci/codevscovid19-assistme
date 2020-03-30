@@ -3,19 +3,21 @@
 <html lang="en">
 {% include "head.html" %}
   <body>
-    <div class="col-md-4 mt-2 text-center">
-      <button id="requestbutton"
-              name="requestbutton"
-              class="btn btn-primary"
-              onclick="location.href='{% url 'requesterHome' %}'">I need help!</button>
-    </div>
-    <div class="col-md-4 mt-2 text-center">
-      <button id="providebutton"
-              name="providebutton"
-              class="btn btn-primary"
-              onclick="location.href='{% url 'providerHome' %}'">I can help!</button>
-    </div>
-    {% render_bundle 'main' 'js' 'DEFAULT' %}
-    {% include "scripts.html" %}
-    </body>
+      <div class="container-xl">
+        <div class="col-md-auto mt-2 text-center">
+          <button id="requestbutton"
+                  name="requestbutton"
+                  class="btn btn-primary"
+                  onclick="location.href='{% url 'requesterHome' %}'">I need help!</button>
+        </div>
+        <div class="col-md-auto mt-2 text-center">
+          <button id="providebutton"
+                  name="providebutton"
+                  class="btn btn-primary"
+                  onclick="location.href='{% url 'providerHome' %}'">I can help!</button>
+        </div>
+        {% render_bundle 'main' 'js' 'DEFAULT' %}
+        {% include "scripts.html" %}
+      </div>
+  </body>
 </html>

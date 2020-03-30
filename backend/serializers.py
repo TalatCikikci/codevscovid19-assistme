@@ -1,11 +1,17 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import RequestItem, UserExtended, SystemMessage
+from .models import RequestList, RequestListItem, UserExtended, SystemMessage
 
 
-class RequestSerializer(serializers.ModelSerializer):
+class RequestListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RequestItem
+        model = RequestList
+        fields = '__all__'
+
+
+class RequestListItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RequestListItem
         fields = '__all__'
 
 

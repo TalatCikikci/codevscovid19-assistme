@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 
 import ProviderApp from "./components/ProviderApp";
 import RequesterApp from "./components/RequesterApp";
+import App from "./components/App";
 
 
 try {
   ReactDOM.render(
-    <RequesterApp/>,
+    <App/>,
     document.getElementById('requester'),
   );
 }
 catch(err) {
   ReactDOM.render(
-    <ProviderApp/>,
+    <App/>,
     document.getElementById('provider'),
   );
 }
